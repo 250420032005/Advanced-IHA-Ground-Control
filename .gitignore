@@ -1,0 +1,42 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+iha-ground-control/node_modules
+iha-ground-control/.pnp
+iha-ground-control/.pnp.*
+iha-ground-control/.yarn/*
+!iha-ground-control/.yarn/patches
+!iha-ground-control/.yarn/plugins
+!iha-ground-control/.yarn/releases
+!iha-ground-control/.yarn/versions
+
+# testing
+iha-ground-control/coverage
+
+# next.js
+iha-ground-control/.next/
+iha-ground-control/out/
+
+# production
+iha-ground-control/build
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# env files (can opt-in for committing if needed)
+iha-ground-control/.env*
+iha-ground-control/.env.local
+
+# vercel
+iha-ground-control/.vercel
+
+# typescript
+iha-ground-control/*.tsbuildinfo
+iha-ground-control/next-env.d.ts
