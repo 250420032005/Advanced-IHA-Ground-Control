@@ -1,6 +1,7 @@
 import React from "react";
 import AlkarHeader from "@/components/header";
 import AlkarFooter from "@/components/footer";
+import Sidebar from "@/components/sidebar";
 
 const IHAGroundControl = () => {
   return (
@@ -10,8 +11,10 @@ const IHAGroundControl = () => {
         <AlkarHeader />
       </div>
 
-      {/* Left Column (middle) */}
-      <div className="col-start-1 row-start-2 bg-yellow-300"></div>
+      {/* Sidebar */}
+      <div className="col-start-1 row-start-2 bg-sidebar">
+        <Sidebar />
+      </div>
 
       {/* Right Column (middle) */}
       <div className="col-start-2 row-start-2 bg-gray-800"></div>
