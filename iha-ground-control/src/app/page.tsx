@@ -1,7 +1,10 @@
+"use client";
+
 import React from "react";
 import AlkarHeader from "@/components/header";
 import AlkarFooter from "@/components/footer";
 import Sidebar from "@/components/sidebar";
+import Map from "@/components/map";
 
 const IHAGroundControl = () => {
   return (
@@ -16,8 +19,10 @@ const IHAGroundControl = () => {
         <Sidebar />
       </div>
 
-      {/* Right Column (middle) */}
-      <div className="col-start-2 row-start-2 bg-gray-800"></div>
+      {/* Map */}
+      <div className="col-start-2 row-start-2 bg-gray-800">
+        <Map />
+      </div>
 
       {/* Footer */}
       <div className="col-span-2 row-start-3 h-12 bg-white">

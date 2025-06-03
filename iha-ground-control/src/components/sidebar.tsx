@@ -7,17 +7,17 @@ const Sidebar = () => {
     <div className="flex w-full h-full justify-center items-center">
       <ul className="flex flex-col gap-y-5">
         <li>
-          <button className="bg-buttonbg rounded-md">
+          <button className="bg-sidebarbtnbg rounded-md">
             <MdOutlineSettingsInputAntenna className="fill-white w-9 h-9 m-2" />
           </button>
         </li>
         <li>
-          <button className="bg-buttonbg rounded-md">
+          <button className="bg-sidebarbtnbg rounded-md">
             <IoGameControllerOutline className="fill-white text-white w-9 h-9 m-2" />
           </button>
         </li>
         <li>
-          <button className="bg-buttonbg rounded-md">
+          <button className="bg-sidebarbtnbg rounded-md">
             <IoQrCodeOutline className="fill-white text-white w-9 h-9 m-2" />
           </button>
         </li>
