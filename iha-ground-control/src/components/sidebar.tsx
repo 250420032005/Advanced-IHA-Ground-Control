@@ -1,13 +1,27 @@
 import React from "react";
+import { Dispatch, SetStateAction } from "react";
 import { IoQrCodeOutline, IoGameControllerOutline } from "react-icons/io5";
 import { MdOutlineSettingsInputAntenna } from "react-icons/md";
 
-const Sidebar = () => {
+type Props = {
+  setTelemetryActive: Dispatch<SetStateAction<boolean>>;
+};
+
+const Sidebar = ({ setTelemetryActive }: Props) => {
+  function handleClickTelemetry() {
+    setTelemetryActive((a) => !a);
+  }
+
   return (
     <div className="flex w-full h-full justify-center items-center">
       <ul className="flex flex-col gap-y-5">
         <li>
-          <button className="bg-sidebarbtnbg rounded-md">
+          <button
+            onClick={() => {
+              handleClickTelemetry();
+            }}
+            className="bg-sidebarbtnbg rounded-md"
+          >
             <MdOutlineSettingsInputAntenna className="fill-white w-9 h-9 m-2" />
           </button>
         </li>

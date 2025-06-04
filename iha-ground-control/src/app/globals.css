@@ -13,4 +13,13 @@
   /* Button */
   --color-sidebarbtnbg: #225dd6;
   --color-footerbtnbg: #071f4f;
+
+  /* Sidebar Components */
+  --color-componentbg: #7886c7;
+  --color-outlineclr: #363e8a;
+}
+
+/* Leaflet Styling */
+.leaflet-container {
+  z-index: 0;
 }

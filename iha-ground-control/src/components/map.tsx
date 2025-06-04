@@ -16,9 +16,6 @@ export default function Map() {
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           attribution="&copy; OpenStreetMap contributors"
         />
-        <Marker position={[41.0, 29.0]}>
-          <Popup>UAV is here 🚁</Popup>
-        </Marker>
       </MapContainer>
     </div>
   );
