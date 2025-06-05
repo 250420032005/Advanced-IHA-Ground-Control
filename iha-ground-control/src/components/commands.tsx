@@ -10,13 +10,13 @@ const CommandControl = () => {
         Savaşan İHA Görevi
       </button>
       <button className="col-start-1 row-start-2 bg-mannualbtn rounded-md text-gray-900 text-lg">
-        Otonom Kontrol
+        Otonom İniş
       </button>
       <button className="col-start-2 row-start-2 bg-mannualbtn rounded-md text-gray-900 text-lg">
         Otonom Kalkış
       </button>
       <button className="col-start-1 row-start-3 bg-mannualbtn rounded-md text-gray-900 text-lg">
-        Otonom İniş
+        Otonom Kontrol
       </button>
       <button className="col-start-2 row-start-3 bg-mannualbtn rounded-md text-gray-900 text-lg">
         Manuel Kontrol

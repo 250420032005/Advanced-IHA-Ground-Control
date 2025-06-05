@@ -15,7 +15,7 @@ const IHAGroundControl = () => {
   const [telemetryActive, setTelemetryActive] = useState(false);
   const [commandControlActive, setCommandControlActive] = useState(false);
   const [qrActive, setQRActive] = useState(false);
-  const [cameraActive, setCameraActive] = useState(true);
+  const [cameraActive, setCameraActive] = useState(false);
 
   return (
     <div className="grid grid-cols-[65px_auto] grid-rows-[auto_1fr_auto] grid-cols-2 w-screen h-screen overflow-hidden">
@@ -36,7 +36,9 @@ const IHAGroundControl = () => {
 
       {/* Plane Components */}
       <div className="relative col-start-2 row-start-2 bg-gray-800">
-        <div className="w-full h-full z-10">{/* <Map /> */}</div>
+        <div className="w-full h-full z-10">
+          <Map />
+        </div>
         {telemetryActive ? (
           <div className="w-100 h-150 absolute top-2 left-2 z-20">
             <Telemetry />
@@ -59,8 +61,8 @@ const IHAGroundControl = () => {
           <div style={{ display: "none" }}></div>
         )}
         {cameraActive ? (
-          <div className="w-161 h-129 absolute bottom-1 right-1 z-40">
-            <Camera />
+          <div className="absolute bottom-1 right-1 z-40">
+            <Camera setCameraActive={setCameraActive} />
           </div>
         ) : (
           <div style={{ display: "none" }}></div>

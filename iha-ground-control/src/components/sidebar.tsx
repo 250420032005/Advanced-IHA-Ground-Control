@@ -37,7 +37,7 @@ const Sidebar = ({
 
   return (
     <div className="flex w-full h-full justify-center items-center">
-      <ul className="flex flex-col gap-y-5">
+      <ul className="flex flex-col items-center justify-center gap-y-5">
         <li>
           <button
             onClick={() => {
