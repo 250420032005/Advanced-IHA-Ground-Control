@@ -2,14 +2,37 @@ import React from "react";
 import { Dispatch, SetStateAction } from "react";
 import { IoQrCodeOutline, IoGameControllerOutline } from "react-icons/io5";
 import { MdOutlineSettingsInputAntenna } from "react-icons/md";
+import { LuCamera } from "react-icons/lu";
 
 type Props = {
   setTelemetryActive: Dispatch<SetStateAction<boolean>>;
+  setCommandControlActive: Dispatch<SetStateAction<boolean>>;
+  setQRActive: Dispatch<SetStateAction<boolean>>;
+  setCameraActive: Dispatch<SetStateAction<boolean>>;
 };
 
-const Sidebar = ({ setTelemetryActive }: Props) => {
+const Sidebar = ({
+  setTelemetryActive,
+  setCommandControlActive,
+  setQRActive,
+  setCameraActive,
+}: Props) => {
   function handleClickTelemetry() {
-    setTelemetryActive((a) => !a);
+    setTelemetryActive((state) => !state);
+    setCommandControlActive(false);
+  }
+
+  function handleClickCommandControl() {
+    setCommandControlActive((state) => !state);
+    setTelemetryActive(false);
+  }
+
+  function handleClickQR() {
+    setQRActive((state) => !state);
+  }
+
+  function handleClickCamera() {
+    setCameraActive((state) => !state);
   }
 
   return (
@@ -22,17 +45,37 @@ const Sidebar = ({ setTelemetryActive }: Props) => {
             }}
             className="bg-sidebarbtnbg rounded-md"
           >
-            <MdOutlineSettingsInputAntenna className="fill-white w-9 h-9 m-2" />
+            <MdOutlineSettingsInputAntenna className="w-9 h-9 fill-white m-2" />
+          </button>
+        </li>
+        <li>
+          <button
+            className="bg-sidebarbtnbg rounded-md"
+            onClick={() => {
+              handleClickCommandControl();
+            }}
+          >
+            <IoGameControllerOutline className="w-9 h-9 fill-white text-white m-2" />
           </button>
         </li>
         <li>
           <button className="bg-sidebarbtnbg rounded-md">
-            <IoGameControllerOutline className="fill-white text-white w-9 h-9 m-2" />
+            <LuCamera
+              onClick={() => {
+                handleClickCamera();
+              }}
+              className="w-9 h-9 text-white m-2"
+            />
           </button>
         </li>
         <li>
-          <button className="bg-sidebarbtnbg rounded-md">
-            <IoQrCodeOutline className="fill-white text-white w-9 h-9 m-2" />
+          <button
+            onClick={() => {
+              handleClickQR();
+            }}
+            className="bg-sidebarbtnbg rounded-md"
+          >
+            <IoQrCodeOutline className="w-9 h-9 fill-white text-white m-2" />
           </button>
         </li>
       </ul>

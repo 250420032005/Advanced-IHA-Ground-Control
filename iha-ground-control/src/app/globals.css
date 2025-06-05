@@ -13,6 +13,9 @@
   /* Button */
   --color-sidebarbtnbg: #225dd6;
   --color-footerbtnbg: #071f4f;
+  --color-missionbtn: #d3e671;
+  --color-emergencybtn: #cd5656;
+  --color-mannualbtn: #d0ddd0;
 
   /* Sidebar Components */
   --color-componentbg: #7886c7;
